@@ -1,0 +1,1 @@
+# genspark_subclass_interface
