@@ -34,8 +34,6 @@ public class Classroom extends Room {
 	
 	public static Classroom[] getClassRooms(Room[] rooms) {
 		Map<String, List<Room>> roomDistinct = Stream.of(rooms).collect(Collectors.groupingBy(Room::toString));
-//		Map<String, Long> roomDistincts = Stream.of(rooms).collect(Collectors.groupingBy(room-> Room::toString, Collectors.counting()));
-//		Map<Room, Long> roomDistinct = Stream.of(rooms).collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 		Classroom[] result = roomDistinct.entrySet().stream().map(e -> 
 		new Classroom(
 				e.getValue().get(0).getWidth(),
